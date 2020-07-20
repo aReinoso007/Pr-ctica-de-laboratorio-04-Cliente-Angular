@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { WsJeeService } from './service/ws-jee.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -30,7 +31,7 @@ import { PageNotFound404Component } from './components/page-not-found404/page-no
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WsJeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
