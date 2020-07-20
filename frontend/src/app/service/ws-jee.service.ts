@@ -58,26 +58,8 @@ export class WsJeeService {
     );
   }
 
-  getClients(){
-    return this.http.get('http://localhost:8080/Practica-4/rest/service2/listadousuarios');
-  }
-
   getClientes() {
     return this.http.get('http://localhost:8080/Practica-4/rest/service2/listadousuarios');
   }
-
-   /*
-  getClients() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/listadousuarios");
-  }
-
-  getLogin() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/inicio");
-  }
-
-  getClientes() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/listadousuarios");
-  }
-  */
 
 }
