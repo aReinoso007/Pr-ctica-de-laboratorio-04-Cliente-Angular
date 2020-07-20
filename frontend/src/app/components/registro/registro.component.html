@@ -1,0 +1,25 @@
+<h1>Regristro de nuevo usuario</h1>
+<div className="formulario">
+    <form class=""  (ngSubmit)="registrar()" #userForm="ngForm"> 
+        <label for="nombre">Nombre</label><br>
+        <input type="text" placeholder="Nombre" [(ngModel)]="dataUser.nombre" [ngModelOptions]="{standalone: true}" required><br>
+
+        <label for="apellido">Apellido</label><br>
+        <input type="text" placeholder="Apellido" [(ngModel)]="dataUser.apellido"  [ngModelOptions]="{standalone: true}" required><br>
+
+        <label for="cedula">Cedula</label><br>
+        <input type="text" placeholder="cedula" [(ngModel)]="dataUser.cedula" [ngModelOptions]="{standalone: true}" required><br>
+
+        <label for="direccion">Direccion</label><br>
+        <input type="text" placeholder="direccion" [(ngModel)]="dataUser.direccion" [ngModelOptions]="{standalone: true}" required><br>
+
+        <label for="correo">Correo</label><br>
+        <input type="email" placeholder="correo" [(ngModel)]="dataUser.correo" [ngModelOptions]="{standalone: true}" required><br>
+
+        <label for="contrasena">Contrasena</label><br>
+        <input type="password" placeholder="Contrasena" [(ngModel)]="dataUser.contrasena" [ngModelOptions]="{standalone: true}" required><br>
+
+        <button type="submit" [disabled]="!userForm.form.valid">Registrar</button>
+    </form>
+
+</div>

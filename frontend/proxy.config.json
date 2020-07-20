@@ -1,0 +1,8 @@
+{
+    "/Practica-4/rest/service2*":{
+        "target": "http://localhost:8080",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite":{"^/Practica-4/rest/service2":""}
+    }
+}
