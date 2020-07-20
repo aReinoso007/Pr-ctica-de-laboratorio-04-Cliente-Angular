@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Usuario } from '../models/models.usuario';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import { LoginObject } from '../models/models.loginobject';
+import { Session } from '../models/models.session';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +17,10 @@ export class WsJeeService {
   constructor(private http: HttpClient) { 
     
   }
+
+  /**login(loginObj: LoginObject): Observable<Session> {
+    return this.http.post()
+  } */
  
   public registrarCliente(usuario: Usuario) {
     const body = new HttpParams()
@@ -50,8 +58,12 @@ export class WsJeeService {
     );
   }
 
-  getClients() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/listadousuarios");
+  getClients(){
+    return this.http.get('http://localhost:8080/Practica-4/rest/service2/listadousuarios');
+  }
+
+  getClientes() {
+    return this.http.get('http://localhost:8080/Practica-4/rest/service2/listadousuarios');
   }
 
    /*

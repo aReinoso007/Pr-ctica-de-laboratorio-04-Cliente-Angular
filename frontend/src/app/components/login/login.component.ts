@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WsJeeService } from '../../service/ws-jee.service';
 import { Router, Data } from '@angular/router';
+import { Usuario } from 'src/app/models/models.usuario';
 
 @Component({
   selector: 'app-login',
@@ -10,21 +11,28 @@ import { Router, Data } from '@angular/router';
 export class LoginComponent implements OnInit {
   
   @Input() dataUser = {
-    correo:'', contrasena:''
-  }
+    correo: '', contrasena: ''
+  };
+  id: number;
+  user: Usuario;
+  public usuarios: any = [];
 
   constructor(
     public servicio: WsJeeService,
     public router: Router
   ) { }
 
-  ngOnInit(): void {
-    console.log('listando usuarios')
-    this.servicio.getClients();
-    console.log('listando usuarios: ', this.servicio.getClients().subscribe((data: {}) => {
-      let datas: Data
-      console.log('datos recuperados: ', datas)
-    }))
+  ngOnInit() {
+    this.getUsuarios();
+  }
+
+  getUsuarios() {
+    return this.servicio.getClientes().subscribe((response: any) => {
+      this.usuarios = response;
+      console.log(response);
+    }, (error) => {
+        console.error(error)
+    })
   }
 
   login() {
@@ -37,5 +45,7 @@ export class LoginComponent implements OnInit {
     });
     
   }
+
+  
 
 }
