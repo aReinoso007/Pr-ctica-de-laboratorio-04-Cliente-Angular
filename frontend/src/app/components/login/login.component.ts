@@ -19,6 +19,12 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log('listando usuarios')
+    this.servicio.getClients();
+    console.log('listando usuarios: ', this.servicio.getClients().subscribe((data: {}) => {
+      let datas: Data
+      console.log('datos recuperados: ', datas)
+    }))
   }
 
   login() {
