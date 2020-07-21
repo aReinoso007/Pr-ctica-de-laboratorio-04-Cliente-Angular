@@ -11,7 +11,7 @@ import { Session } from '../models/models.session';
 })
 export class WsJeeService {
 
-  private crearUserURl = 'http://localhost:8080/Practica-4/rest/service2/usuarios';
+  private crearUserURl = 'http://localhost:8080/Practica-4/rest/Usuarios/post';
   private loginURL = 'http://localhost:8080/Practica-4/rest/service2/inicio';
 
   constructor(private http: HttpClient) { 
@@ -59,7 +59,7 @@ export class WsJeeService {
   }
 
   getClientes() {
-    return this.http.get('http://localhost:8080/Practica-4/rest/service2/listadousuarios');
+    return this.http.get('http://localhost:8080/Practica-4/rest/Usuarios');
   }
 
 }

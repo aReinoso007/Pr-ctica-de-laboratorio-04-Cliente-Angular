@@ -13,6 +13,7 @@ import { IndexUsuarioComponent } from './components/index-usuario/index-usuario.
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { PageNotFound404Component } from './components/page-not-found404/page-not-found404.component';
+import { ActivarUsuarioComponent } from './components/activar-usuario/activar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNotFound404Component } from './components/page-not-found404/page-no
     IndexUsuarioComponent,
     CatalogoComponent,
     RegistroComponent,
-    PageNotFound404Component
+    PageNotFound404Component,
+    ActivarUsuarioComponent
   ],
   imports: [
     BrowserModule,
