@@ -1,18 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Usuario } from '../models/models.usuario';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import { LoginObject } from '../models/models.loginobject';
+import { Session } from '../models/models.session';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WsJeeService {
 
-  private crearUserURl = 'http://localhost:8080/Practica-4/rest/service2/usuarios';
+  private crearUserURl = 'http://localhost:8080/Practica-4/rest/Usuarios/post';
   private loginURL = 'http://localhost:8080/Practica-4/rest/service2/inicio';
+  private activarCuenta = 'http://localhost:8080/Practica-4/rest/Usuarios/activar';
 
   constructor(private http: HttpClient) { 
     
   }
+
+  /**login(loginObj: LoginObject): Observable<Session> {
+    return this.http.post()
+  } */
  
   public registrarCliente(usuario: Usuario) {
     const body = new HttpParams()
@@ -50,22 +59,23 @@ export class WsJeeService {
     );
   }
 
-  getClients() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/listadousuarios");
-  }
-
-   /*
-  getClients() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/listadousuarios");
-  }
-
-  getLogin() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/inicio");
-  }
-
   getClientes() {
-    return this.http.get("http://localhost:8080/Practica-4/rest/service2/listadousuarios");
+    return this.http.get('http://localhost:8080/Practica-4/rest/Usuarios');
   }
-  */
+
+  postActivacion(cedula: string, contrasena: string) {
+    const body = new HttpParams()
+      .set('cedula', cedula)
+      .set('contrasena', contrasena)
+    
+    return this.http.post(
+      this.activarCuenta,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
+        responseType: 'text'
+      }
+    );
+  }
 
 }

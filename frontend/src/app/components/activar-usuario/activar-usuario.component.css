@@ -5,25 +5,17 @@
     padding-bottom: 20px;
 }
 .formulario{
-    padding-right: 50%;
+    padding-right: 20px;
+    margin: 10% 35%;
 }
 #letras-p{
     font-size: medium;
 }
-
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
   }
 input[type="text"] {
-    border-radius: 5%;
-    background-color: rgb(227, 231, 233);
-    box-sizing: content-box;
-    border: 1px solid #ccc;
-    padding-top: 15px;
-    padding-left: 30px;
-}
-input[type="email"] {
     border-radius: 5%;
     background-color: rgb(227, 231, 233);
     box-sizing: content-box;
@@ -42,15 +34,11 @@ input[type="password"] {
 button[type=submit]  {
     background-color: #4CAF50;
     color: white;
-    width: 55%;
+    width: 85%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-}
-
-form{
-    margin: 0 auto;
 }
