@@ -1,14 +1,16 @@
-<h1>Regristro de nuevo usuario</h1>
-<div className="formulario">
-    <form class=""  (ngSubmit)="login()" #userForm="ngForm"> 
-   
-        <label for="correo">Correo</label><br>
-        <input type="email" placeholder="correo" [(ngModel)]="dataUser.correo" [ngModelOptions]="{standalone: true}" required><br>
-
-        <label for="contrasena">Contrasena</label><br>
-        <input type="password" placeholder="Contrasena" [(ngModel)]="dataUser.contrasena" [ngModelOptions]="{standalone: true}" required><br>
-
-        <button type="submit" [disabled]="!userForm.form.valid">LOGIN</button>
-    </form>
-
+<div class="container">
+    <h1>Inicio de sesion</h1>
+    <div class="formulario">
+        <form class=""  (ngSubmit)="login()" #userForm="ngForm"> 
+       
+            <label for="correo">Correo</label><br>
+            <input type="email" placeholder="correo" [(ngModel)]="dataUser.correo" [ngModelOptions]="{standalone: true}" required><br>
+    
+            <label for="contrasena">Contrasena</label><br>
+            <input type="password" placeholder="Contrasena" [(ngModel)]="dataUser.contrasena" [ngModelOptions]="{standalone: true}" required><br>
+    
+            <button type="submit" [disabled]="!userForm.form.valid">LOGIN</button>
+        </form><br>
+        <p id="letras-p">Quiere verificar si ya se encuentra registrado?</p><a href="#" routerLink="/activar">Activar Cuenta</a>
+    </div>
 </div>
