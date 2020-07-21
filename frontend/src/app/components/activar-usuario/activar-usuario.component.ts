@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { WsJeeService } from '../../service/ws-jee.service';
 
 @Component({
   selector: 'app-activar-usuario',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivarUsuarioComponent implements OnInit {
 
-  constructor() { }
+  @Input() detalles = {
+    cedula: '', contrasena:''
+  }
+  constructor(
+    public servicio: WsJeeService,
+    public router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+  }
+
+  activarCuenta() {
+    this.servicio.postActivacion(this.detalles.cedula, this.detalles.contrasena).subscribe((data: any) => {
+      this.router.navigate(['/catalogo'])
+      console.log('usuario activado')
+    })
   }
 
 }

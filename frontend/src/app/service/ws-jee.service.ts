@@ -13,6 +13,7 @@ export class WsJeeService {
 
   private crearUserURl = 'http://localhost:8080/Practica-4/rest/Usuarios/post';
   private loginURL = 'http://localhost:8080/Practica-4/rest/service2/inicio';
+  private activarCuenta = 'http://localhost:8080/Practica-4/rest/Usuarios/activar';
 
   constructor(private http: HttpClient) { 
     
@@ -60,6 +61,21 @@ export class WsJeeService {
 
   getClientes() {
     return this.http.get('http://localhost:8080/Practica-4/rest/Usuarios');
+  }
+
+  postActivacion(cedula: string, contrasena: string) {
+    const body = new HttpParams()
+      .set('cedula', cedula)
+      .set('contrasena', contrasena)
+    
+    return this.http.post(
+      this.activarCuenta,
+      body.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
+        responseType: 'text'
+      }
+    );
   }
 
 }

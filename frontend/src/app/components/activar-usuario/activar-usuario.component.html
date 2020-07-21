@@ -1,1 +1,13 @@
-<p>activar-usuario works!</p>
+<h1>Regristro de nuevo usuario</h1>
+<div className="formulario">
+    <form class=""  (ngSubmit)="activarCuenta()" #userForm="ngForm"> 
+        <label for="cedula">Cedula</label><br>
+        <input type="text" placeholder="cedula" [(ngModel)]="detalles.cedula" [ngModelOptions]="{standalone: true}" required><br>
+
+        <label for="contrasena">Contrasena</label><br>
+        <input type="password" placeholder="Contrasena" [(ngModel)]="detalles.contrasena" [ngModelOptions]="{standalone: true}" required><br>
+
+        <button type="submit" [disabled]="!userForm.form.valid">Registrar</button>
+    </form>
+
+</div>
