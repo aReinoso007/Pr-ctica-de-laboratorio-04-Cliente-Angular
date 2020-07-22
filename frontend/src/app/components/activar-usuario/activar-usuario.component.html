@@ -1,20 +1,23 @@
-
 <div class="container">
     <h1>Valida tu cuenta</h1>
-    <p>
-        Para poder validar tu cuenta ingresa tu numero de cedula y una contrasena. 
-    </p>
-    <div class="formulario">
-        <form class="login"  (ngSubmit)="activarCuenta()" #userForm="ngForm"> 
-            <label for="cedula">Cedula</label><br>
-            <input type="text" placeholder="cedula" [(ngModel)]="detalles.cedula" [ngModelOptions]="{standalone: true}" required><br>
-    
-            <label for="contrasena">Contrasena</label><br>
-            <input type="password" placeholder="Contrasena" [(ngModel)]="detalles.contrasena" [ngModelOptions]="{standalone: true}" required><br>
-            <br>
-            <button type="submit" [disabled]="!userForm.form.valid">Validar</button>
-        </form>
-    
+    <p>Para poder validar tu cuenta ingresa tu número de cédula y una contraseña.</p>
+    <div class="row no-gutters row-cols-2">
+        <div class="col">
+            <figure class="figure">
+                <img src="https://cdn.pixabay.com/photo/2016/12/01/14/02/light-bulbs-1875384_1280.jpg" class="figure-img img-fluid rounded" />
+            </figure>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="formulario">
+                <form class="login" (ngSubmit)="activarCuenta()" #userForm="ngForm">
+                    <label for="cedula">Cédula</label><br>
+                    <input type="text" placeholder="cedula" [(ngModel)]="detalles.cedula" [ngModelOptions]="{standalone: true}" required><br>
+                    <label for="contrasena">Contraseña</label><br>
+                    <input type="password" placeholder="Contrasena" [(ngModel)]="detalles.contrasena" [ngModelOptions]="{standalone: true}" required><br>
+                    <br>
+                    <button type="submit" [disabled]="!userForm.form.valid">Validar</button>
+                </form>
+            </div>
+        </div>
     </div>
-    
 </div>
