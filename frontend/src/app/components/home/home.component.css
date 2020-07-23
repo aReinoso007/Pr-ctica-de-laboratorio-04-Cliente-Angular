@@ -1,10 +1,15 @@
-.container {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 20px;
+div#scroll {
+    background-image: url("https://images.unsplash.com/photo-1533745848184-3db07256e163?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 545px;
 }
 
-.subcontainer {
-    padding-right: 50%;
+div#scroll2 {
+    background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 545px;
 }

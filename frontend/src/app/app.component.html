@@ -1,58 +1,54 @@
 <!--aqui se agregan los menus header-->
 <!--Main Navigation-->
-<header id="main-header">
-    <div class="container">
-        <a routerLink="/" class="logo">Distribuidora</a>
-        <nav>
-            <ul>
-                <li><a href="#" routerLink="/home">Home</a></li>
-                <li><a href="#" routerLink="/catalogo">Catálogo</a></li>
-                <!--<li><a href="#" routerLink="/registrar">Registrarse</a></li>-->
-                <li><a href="#" routerLink="/login">Login</a></li>
-                <li><a href="#" routerLink="/activar">Activar Cuenta</a></li>
-            </ul>
-        </nav>
-    </div>
+
+<header>
+    <nav class="light-blue darken-4">
+        <a routerLink="/" class="logo" class="brand-logo"><i class="material-icons">donut_small</i>Distribuidora</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#" routerLink="/home">Home</a></li>
+            <li><a href="#" routerLink="/catalogo">Catálogo</a></li>
+            <!--<li><a href="#" routerLink="/registrar">Registrarse</a></li>-->
+            <li><a href="#" routerLink="/login">Login</a></li>
+            <li><a href="#" routerLink="/activar">Activar Cuenta</a></li>
+        </ul>
+    </nav>
 </header>
 
+<router-outlet></router-outlet>
 
+<footer class="indigo darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Universidad Politécnica Salesiana</h5>
+                <p class="grey-text text-lighten-4">Matería de Plataformas Web Grupo-1.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a href="#" class="collection-item" routerLink="/home">Home</a></li>
+                    <li><a href="#" class="collection-item" routerLink="/catalogo">Catálogo</a></li>
+                    <li><a href="#" class="collection-item" routerLink="/login">Iniciar Sesión</a></li>
+                    <li><a href="#" class="collection-item" routerLink="/activar">Activar cuenta</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+        </div>
+    </div>
+</footer>
+
+<!-- Materialize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Bootsrap 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<router-outlet></router-outlet>
-
-<footer>
-    <section id="footer">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Accesos</h5>
-                    <ul class="list-unstyled quick-links">
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right" routerLink="/home"></i>Home</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right" routerLink="/catalogo"></i>Catálogo</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right" routerLink="/login"></i>Iniciar Sesión</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right" routerLink="/activar"></i>Activar cuenta</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Integrantes</h5>
-                    <ul class="list-unstyled quick-links">
-                        <li><a href="javascript:void();">Pablo Calle</a></li>
-                        <li><a href="javascript:void();">Daniel Peralta</a></li>
-                        <li><a href="javascript:void();">Alex Reinoso</a></li>
-                        <li><a href="javascript:void();">Christian Zhirzhan</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                    <p><u><a href="https://www.ups.edu.ec">Universidad Politécnica Salesiana</a></u></p>
-                    <p class="h6">PLATAFORMAS WEB GRUPO - 1
-                        <a class="text-green ml-2" target="_blank"></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-</footer>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
