@@ -1,0 +1,23 @@
+# Pr-ctica-de-laboratorio-04-Cliente-Angular
+Desarrollo de aplicación JEE y Angular basado en EJB, JSF, JPA, y WS para el intercambio de datos en una aplicación empresarial. 
+
+![001](https://user-images.githubusercontent.com/34029227/88308634-e70feb00-ccd2-11ea-9b3f-387bc23c37b4.PNG)
+![002](https://user-images.githubusercontent.com/34029227/88308636-e7a88180-ccd2-11ea-9af9-0284b8736594.PNG)
+![003](https://user-images.githubusercontent.com/34029227/88308638-e7a88180-ccd2-11ea-8f50-d67975d98a43.PNG)
+![004](https://user-images.githubusercontent.com/34029227/88308639-e8411800-ccd2-11ea-9947-411ce86d0828.PNG)
+![005](https://user-images.githubusercontent.com/34029227/88308641-e8411800-ccd2-11ea-9c89-09972f027003.PNG)
+![006](https://user-images.githubusercontent.com/34029227/88308643-e8d9ae80-ccd2-11ea-8074-a2f59aae5d00.PNG)
+![007](https://user-images.githubusercontent.com/34029227/88308645-e8d9ae80-ccd2-11ea-8862-82e85904b7d2.PNG)
+![008](https://user-images.githubusercontent.com/34029227/88308646-e8d9ae80-ccd2-11ea-9d9b-f69fbddb47a4.PNG)
+![009](https://user-images.githubusercontent.com/34029227/88308648-e9724500-ccd2-11ea-9392-3e64f0f6aec3.PNG)
+![010](https://user-images.githubusercontent.com/34029227/88308649-e9724500-ccd2-11ea-8695-678b393a3856.PNG)
+![011](https://user-images.githubusercontent.com/34029227/88308652-ea0adb80-ccd2-11ea-83c7-48b9b1ad426d.PNG)
+![012](https://user-images.githubusercontent.com/34029227/88308654-ea0adb80-ccd2-11ea-9ee8-24eb3f437d34.PNG)
+![013](https://user-images.githubusercontent.com/34029227/88308655-ea0adb80-ccd2-11ea-958a-0eccd633bd6f.PNG)
+![014](https://user-images.githubusercontent.com/34029227/88308657-eaa37200-ccd2-11ea-9fba-430fa961a7d2.PNG)
+![015](https://user-images.githubusercontent.com/34029227/88308658-eb3c0880-ccd2-11ea-84be-ad61b7a999d1.PNG)
+![016](https://user-images.githubusercontent.com/34029227/88308661-eb3c0880-ccd2-11ea-9126-734104e3f2de.PNG)
+![019](https://user-images.githubusercontent.com/34029227/88308662-ebd49f00-ccd2-11ea-8c2d-8e337b774777.PNG)
+![020](https://user-images.githubusercontent.com/34029227/88308663-ebd49f00-ccd2-11ea-82aa-3e087cc06e4f.PNG)
+![021](https://user-images.githubusercontent.com/34029227/88308664-ec6d3580-ccd2-11ea-8587-35eae48ca559.PNG)
+![022](https://user-images.githubusercontent.com/34029227/88308665-ec6d3580-ccd2-11ea-8420-00c072cee0ed.PNG)
