@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject, ViewChild } from '@angular/core';
 import { WsJeeService } from '../../service/ws-jee.service';
 import { Router, Data } from '@angular/router';
 import { Usuario } from 'src/app/models/models.usuario';
+import { CatalogoComponent } from '../catalogo/catalogo.component';
 
 @Component({
   selector: 'app-login',
@@ -10,12 +11,14 @@ import { Usuario } from 'src/app/models/models.usuario';
 })
 export class LoginComponent implements OnInit {
   
+  public dataSession: any = [];
   @Input() dataUser = {
     correo: '', contrasena: ''
   };
   id: number;
   user: Usuario;
   public usuarios: any = [];
+  cedula: string = '';
 
   constructor(
     public servicio: WsJeeService,
@@ -42,10 +45,24 @@ export class LoginComponent implements OnInit {
       let d: Data;
       console.log("datos recuperados: ", data)
       this.router.navigate(['/catalogo'])
+      this.saveCedula(data);
     });
     
   }
 
+  saveCedula(dat: any) {
+    this.cedula = dat;
+    return this.cedula;
+  }
+  ced: string = '';
+  getCedula() {
+    return this.ced = this.cedula;
+  }
+
+  @ViewChild(CatalogoComponent) hijo;
+  ngAfterViewInit() {
+    this.ced;
+  }
   
 
 }
