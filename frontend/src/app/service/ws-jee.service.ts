@@ -96,7 +96,23 @@ export class WsJeeService {
   }
 
   postEditarUsuario(usuario: Usuario) {
+    const boyd = new HttpParams()
+      .set('cedula', usuario.cedula)
+      .set("nombre", usuario.nombre)
+      .set('apellido', usuario.apellido)
+      .set('direccion', usuario.direccion)
+      .set('correo', usuario.correo)
+      .set('contrasena', usuario.contrasena)
+      .set('estado', usuario.estado)
     
+    return this.http.post(
+      this.editarUsuarioUrl,
+      boyd.toString(),
+      {
+        headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded'),
+        responseType: 'text'
+      }
+    );
   }
 
 }
