@@ -14,12 +14,15 @@
                     <i class="material-icons prefix">account_circle</i>
                     <label for="correo">Correo</label><br>
                     <input type="email" placeholder="Correo" [(ngModel)]="dataUser.correo" [ngModelOptions]="{standalone: true}" required><br>
+                    <label for="correo">Cedula</label><br>
+                    <input type="email" placeholder="Correo" [(ngModel)]="dataUser.cedula" [ngModelOptions]="{standalone: true}" required><br>
                     <i class="material-icons prefix">lock</i>
                     <label for="contrasena">Contraseña</label><br>
                     <input type="password" placeholder="Contraseña" [(ngModel)]="dataUser.contrasena" [ngModelOptions]="{standalone: true}" required><br>
-
-                    <button type="submit" [disabled]="!userForm.form.valid">Login</button>
+                    <a [routerLink]="['/indexUsuario', dataUser.cedula]" class="btn btn-danger"><button type="submit" [disabled]="!userForm.form.valid">Login</button></a>
+                    
                 </form><br>
+                
                 <p id="letras-p">Quiere verificar si ya se encuentra registrado?</p><a href="#" routerLink="/activar">Activar Cuenta</a>
             </div>
         </div>

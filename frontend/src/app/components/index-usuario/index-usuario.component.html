@@ -1,51 +1,24 @@
-<div class="container">
-    <div class="col s12 m7">
-        <h2 class="header">¡Bienvenido!</h2>
-        <div class="card horizontal">
-            <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1568144628871-ccbb00fc297c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-            </div>
-            <div class="card-stacked">
-                <div class="card-content">
-                    <div class="row">
-                        <div class="col s6">
-                            <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png" width="225px" height="225px">
-                        </div>
-                        <div class="col s6">
-                            <h3>Alvin</h3>
-                            <h4>Yakitory</h4>
-                            <p>mail@gmail.com</p>
-                            <p>cedula</p>
-                        </div>
 
-                    </div>
 
-                </div>
+<div className="formulario">
+    <label for="Cedula">Nombre del usuario : </label>
+            
+        <select [(ngModel)]="detalles.cedula" >
+                <option *ngFor="let u of usuarioList"
+                        [value]="u.cedula">
+                        {{u.nombre}} {{u.apellido}}
+                </option>
+        </select><br>
 
-            </div>
-        </div>
-    </div>
-</div>
+        <label for="direccion">Direccion</label><br>
+        <input type="text" placeholder="direccion" [(ngModel)]="detalles.direccion" required><br>
 
-<div class="container">
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
-            </tr>
-        </thead>
+        <label for="correo">Correo</label><br>
+        <input type="email" placeholder="correo" [(ngModel)]="detalles.correo"  required><br>
 
-        <tbody>
-            <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
-            </tr>
-        </tbody>
-        <div class="card-action">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Editar</button>
-        </div>
-    </table>
+        <label for="contrasena">Contrasena</label><br>
+        <input type="password" placeholder="Contrasena" [(ngModel)]="detalles.contrasena" required><br>
+
+        <button type="submit" (click)="editUsuario()">Registrar</button>
+
 </div>

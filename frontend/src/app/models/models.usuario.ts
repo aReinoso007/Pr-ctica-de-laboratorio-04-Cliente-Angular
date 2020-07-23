@@ -5,6 +5,7 @@ export class Usuario{
         public apellido?: string,
         public direccion?: string,
         public correo?: string,
-        public contrasena?: string
+        public contrasena?: string,
+        public estado?: string
     ) { }
 }

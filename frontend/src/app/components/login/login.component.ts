@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   
 
   @Input() dataUser = {
-    correo: '', contrasena: ''
+    correo: '', contrasena: '', cedula:''
   };
   id: number;
   user: Usuario;

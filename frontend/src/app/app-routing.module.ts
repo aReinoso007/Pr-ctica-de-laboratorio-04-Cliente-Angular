@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'catalogo', component: CatalogoComponent },
-  { path: 'indexUsuario', component: IndexUsuarioComponent },
+  { path: 'indexUsuario/:cedula', component: IndexUsuarioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registrar', component: RegistroComponent },
   { path: 'activar', component: ActivarUsuarioComponent },
