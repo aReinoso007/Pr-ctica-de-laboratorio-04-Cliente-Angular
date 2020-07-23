@@ -1,14 +1,33 @@
 
+<div id="content">
 
-<div className="formulario">
-    <label for="Cedula">Nombre del usuario : </label>
+    <div class="container-fluid">
+
+      <!-- DataTales Example -->
+      <div class="card shadow mb-4">
+        <div class="card-body">
+          <div class="table-responsive">
+              <h1>Listado de productos</h1>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <!--<thead>
+                    <tr>
+                        <th scope="col">Stock</th>
+                        <th scope="col">nombre</th>
+                         <th scope="col">Categoria</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of prodList"> 
+                        <td>{{p.stock}}</td>
+                        <td>{{p.nombre}}</td>
+                        <td>{{p.categoria.nombreCategoria}}</td>
+                        <td>{{p.precioVenta}}</td>
+                    </tr>
+                </tbody>-->
+                
             
-        <select [(ngModel)]="detalles.cedula" >
-                <option *ngFor="let u of usuarioList"
-                        [value]="u.cedula">
-                        {{u.nombre}} {{u.apellido}}
-                </option>
-        </select><br>
+        
 
         <label for="direccion">Direccion</label><br>
         <input type="text" placeholder="direccion" [(ngModel)]="detalles.direccion" required><br>
@@ -18,7 +37,41 @@
 
         <label for="contrasena">Contrasena</label><br>
         <input type="password" placeholder="Contrasena" [(ngModel)]="detalles.contrasena" required><br>
+        <label for="Cedula">Nombre del usuario : </label>
+        <select [(ngModel)]="detalles.cedula" >
+            <option *ngFor="let u of usuarioList"
+                    [value]="u.cedula">
+                    {{u.nombre}} {{u.apellido}}
+            </option>
+    </select><br>
 
         <button type="submit" (click)="editUsuario()">Registrar</button>
 
-</div>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+      <a href='categorias'>Busqueda por categorias</a>
+
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+
+   <!-- Bootstrap core JavaScript-->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\jquery\jquery.min.js"></script>
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\bootstrap\js\bootstrap.bundle.min.js"></script>
+
+ <!-- Core plugin JavaScript-->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\jquery-easing\jquery.easing.min.js"></script>
+
+ <!-- Custom scripts for all pages-->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\js\sb-admin-2.min.js"></script>
+
+ <!-- Page level plugins -->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\datatables\jquery.dataTables.min.js"></script>
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\datatables\dataTables.bootstrap4.min.js"></script>
+
+ <!-- Page level custom scripts -->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\js\demo\datatables-demo.js"></script>

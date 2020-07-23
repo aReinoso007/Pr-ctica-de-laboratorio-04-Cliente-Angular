@@ -1,0 +1,16 @@
+node {
+    stage('Checkout SCM'){
+        git branch: 'master', url:'https://github.com/aReinoso007/Pr-ctica-de-laboratorio-04-Cliente-Angular.git'
+    }
+    stage('install node modules'){
+        sh "npm install"
+    }
+
+    stage('Build'){
+        sh "npm run ng build --prod"
+    }
+
+    stage('Deploy'){
+        sh "pm2 restart all"
+    }
+}
