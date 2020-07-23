@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { PageNotFound404Component } from './components/page-not-found404/page-not-found404.component';
 import { ActivarUsuarioComponent } from './components/activar-usuario/activar-usuario.component';
+import { AdmUsuarioComponent } from './components/adm-usuario/adm-usuario.component';
 
 
 const routes: Routes = [

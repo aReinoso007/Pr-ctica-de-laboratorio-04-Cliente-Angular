@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Producto } from '../../models/models.producto';
 import { WsJeeService } from '../../service/ws-jee.service';
 import { Router } from '@angular/router';
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
+
+  cedula: string;
 
   public productoList: Producto[];
 
@@ -28,6 +30,11 @@ export class CatalogoComponent implements OnInit {
       this.prodList = data;
       console.log(this.prodList)
     })
+  }
+
+  getCedula($event) {
+    this.cedula = $event
+    console.log('cedula del cliente ',this.cedula)
   }
 
 

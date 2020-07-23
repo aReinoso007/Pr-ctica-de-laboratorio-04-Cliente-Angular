@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { WsJeeService } from './service/ws-jee.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { PageNotFound404Component } from './components/page-not-found404/page-not-found404.component';
 import { ActivarUsuarioComponent } from './components/activar-usuario/activar-usuario.component';
+import { AdmUsuarioComponent } from './components/adm-usuario/adm-usuario.component';
+import { fromEventPattern } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { ActivarUsuarioComponent } from './components/activar-usuario/activar-us
     CatalogoComponent,
     RegistroComponent,
     PageNotFound404Component,
-    ActivarUsuarioComponent
+    ActivarUsuarioComponent,
+    AdmUsuarioComponent
   ],
   imports: [
     BrowserModule,
