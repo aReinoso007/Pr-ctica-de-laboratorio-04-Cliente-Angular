@@ -8,6 +8,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { PageNotFound404Component } from './components/page-not-found404/page-not-found404.component';
 import { ActivarUsuarioComponent } from './components/activar-usuario/activar-usuario.component';
 import { AdmUsuarioComponent } from './components/adm-usuario/adm-usuario.component';
+import { BuscaCategoriaComponent } from './components/busca-categoria/busca-categoria.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'indexUsuario', component: IndexUsuarioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registrar', component: RegistroComponent },
-  { path: 'activar', component: ActivarUsuarioComponent } ,
+  { path: 'activar', component: ActivarUsuarioComponent },
+  { path: 'categorias', component: BuscaCategoriaComponent},
   
   { path: '**', component: PageNotFound404Component }
 ];

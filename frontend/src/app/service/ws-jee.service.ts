@@ -16,6 +16,7 @@ export class WsJeeService {
   private activarCuenta = 'http://localhost:8080/Practica-4/rest/Usuarios/activar';
   private listarProductosURL = 'http://localhost:8080/Practica-4/rest/service2/productos/ ';
   private seleccionarUsuarioURL = 'http://localhost:8080/Practica-4/rest/Usuarios';
+  private prodsPorCategoria = 'http://localhost:8080/Practica-4/rest/service2/productos';
 
   constructor(private http: HttpClient) { 
     
@@ -86,6 +87,10 @@ export class WsJeeService {
 
   getUsuario(cedula: string) {
     return this.http.get(this.seleccionarUsuarioURL + '/' + cedula);
+  }
+
+  getPorCategorias(categoria: string) {
+    return this.http.get(this.prodsPorCategoria + '/' + categoria);
   }
 
 }

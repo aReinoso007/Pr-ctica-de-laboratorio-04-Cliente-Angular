@@ -17,6 +17,9 @@ export class CatalogoComponent implements OnInit {
 
   public prodList: any = [];
 
+
+
+
   constructor(
     private service: WsJeeService,
     private route: ActivatedRoute
@@ -35,6 +38,8 @@ export class CatalogoComponent implements OnInit {
       console.log(this.prodList)
     })
   }
+
+  
 
   
 }

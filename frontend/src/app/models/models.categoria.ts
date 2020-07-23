@@ -1,6 +1,6 @@
 export class Categoria{
     constructor(
-        public categoria?: number,
+        public codigo?: number,
         public nombreCategoria?: string
     ) {}
 
