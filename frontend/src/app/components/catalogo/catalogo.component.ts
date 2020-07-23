@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Producto } from '../../models/models.producto';
 import { WsJeeService } from '../../service/ws-jee.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-catalogo',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class CatalogoComponent implements OnInit {
 
-  cedula: string;
+  public cedula: string;
 
   public productoList: Producto[];
 
@@ -18,8 +19,11 @@ export class CatalogoComponent implements OnInit {
 
   constructor(
     private service: WsJeeService,
-    private route: Router
-  ) { }
+    private route: ActivatedRoute
+  ) { 
+    this.cedula = route.snapshot.params.usuCedula;
+    console.log(this.cedula);
+  }
 
   ngOnInit() {
     this.getProductos();
@@ -32,10 +36,5 @@ export class CatalogoComponent implements OnInit {
     })
   }
 
-  getCedula($event) {
-    this.cedula = $event
-    console.log('cedula del cliente ',this.cedula)
-  }
-
-
+  
 }
