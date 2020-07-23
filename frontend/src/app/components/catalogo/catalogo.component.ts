@@ -20,7 +20,7 @@ export class CatalogoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+    this.getProductos();
   }
 
   getProductos() {
