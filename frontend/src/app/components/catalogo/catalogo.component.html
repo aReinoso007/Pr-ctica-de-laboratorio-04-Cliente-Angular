@@ -3,11 +3,11 @@
         <div class="container">
             <h1>Productos disponibles</h1>
         </div>
-        <i class="material-icons">search</i><input class="label-icon" type="search" placeholder="Buscar " />
-        <hr>
+        <!-- <i class="material-icons">search</i><input class="label-icon" type="search" placeholder="Buscar " />
+        <hr>-->
     </div>
 </div>
-<table class="striped">
+<!--<table class="striped">
     <thead>
         <tr>
             <th scope="col">Nombre</th>
@@ -32,4 +32,63 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table>-->
+
+<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar por..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+                <i class="material-icons">search</i>
+        </button>
+        </div>
+    </div>
+</form>
+
+<div class="container-fluid">
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Precio de Venta</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Acción</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Precio de Venta</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Acción</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
