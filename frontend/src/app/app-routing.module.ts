@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'catalogo', component: CatalogoComponent },
   { path: 'indexUsuario', component: IndexUsuarioComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login/:correo', component: LoginComponent },
   { path: 'registrar', component: RegistroComponent },
   { path: 'activar', component: ActivarUsuarioComponent },
   { path: 'categorias', component: BuscaCategoriaComponent},
