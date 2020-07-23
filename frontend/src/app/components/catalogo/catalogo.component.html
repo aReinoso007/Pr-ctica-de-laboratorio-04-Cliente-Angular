@@ -10,15 +10,18 @@
 <table class="striped">
     <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Stock</th>
             <th scope="col">nombre</th>
-            <th scope="col">nombre</th>
-            <th scope="col">nombre</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Precio</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
+        <tr *ngFor="let p of prodList"> 
+            <td>{{p.stock}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.precioVenta}}</td>
         </tr>
     </tbody>
 </table>

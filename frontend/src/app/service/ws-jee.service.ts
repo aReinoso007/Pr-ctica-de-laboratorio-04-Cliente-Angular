@@ -14,6 +14,7 @@ export class WsJeeService {
   private crearUserURl = 'http://localhost:8080/Practica-4/rest/Usuarios/post';
   private loginURL = 'http://localhost:8080/Practica-4/rest/service2/inicio';
   private activarCuenta = 'http://localhost:8080/Practica-4/rest/Usuarios/activar';
+  private listarProductosURL = 'http://localhost:8080/Practica-4/rest/service2/productos/ ';
 
   constructor(private http: HttpClient) { 
     
@@ -61,6 +62,10 @@ export class WsJeeService {
 
   getClientes() {
     return this.http.get('http://localhost:8080/Practica-4/rest/Usuarios');
+  }
+
+  getProductos() {
+    return this.http.get(this.listarProductosURL);
   }
 
   postActivacion(cedula: string, contrasena: string) {
