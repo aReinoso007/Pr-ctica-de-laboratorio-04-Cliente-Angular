@@ -17,6 +17,7 @@ import { PageNotFound404Component } from './components/page-not-found404/page-no
 import { ActivarUsuarioComponent } from './components/activar-usuario/activar-usuario.component';
 import { AdmUsuarioComponent } from './components/adm-usuario/adm-usuario.component';
 import { fromEventPattern } from 'rxjs';
+import { BuscaCategoriaComponent } from './components/busca-categoria/busca-categoria.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { fromEventPattern } from 'rxjs';
     RegistroComponent,
     PageNotFound404Component,
     ActivarUsuarioComponent,
-    AdmUsuarioComponent
+    AdmUsuarioComponent,
+    BuscaCategoriaComponent
   ],
   imports: [
     BrowserModule,

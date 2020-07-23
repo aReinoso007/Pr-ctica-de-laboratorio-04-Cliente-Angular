@@ -1,100 +1,55 @@
-<div class="container">
-    <div class="header">
-        <div class="container">
-            <h1>Productos disponibles</h1>
-        </div>
-        <!-- <i class="material-icons">search</i><input class="label-icon" type="search" placeholder="Buscar " />
-        <hr>-->
-    </div>
-</div>
-<!--<table class="striped">
-    <thead>
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Categoría</th>
-            <th scope="col">Precio de Venta</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Marca</th>
-            <th scope="col">Acción</th>
-            <th scope="col">Cantidad</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td scope="row">aqui va nombre</td>
-            <td scope="row">aqui categoria</td>
-            <td scope="row">pre venta</td>
-            <td scope="row">stock</td>
-            <td scope="row">marca</td>
-            <td></td>
-            <td scope="row">
-                <input placeholder="Cantidad" id="first_name" type="text" class="validate">
-            </td>
-        </tr>
-    </tbody>
-</table>-->
 
+<div id="content">
 
-<div class="container-fluid">
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
+    <div class="container-fluid">
+
+      <!-- DataTales Example -->
+      <div class="card shadow mb-4">
         <div class="card-body">
-            <div class="table-responsive">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">search</i>
-                                <input type="text" id="autocomplete-input" class="autocomplete">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <form>
-                    <div class="input-group">
-                        <div class="container">
-                            <h4>Buscar</h4>
-                            <input type="text" placeholder="Buscar..." aria-label="Search">
-                            <button class="btn btn-primary" type="button"><i class="material-icons">search</i></button>
-                        </div>
-                    </div>
-                </form>-->
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Categoría</th>
-                            <th scope="col">Precio de Venta</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Acción</th>
-                            <th scope="col">Cantidad</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Categoría</th>
-                            <th scope="col">Precio de Venta</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Acción</th>
-                            <th scope="col">Cantidad</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div class="table-responsive">
+              <h1>Listado de productos</h1>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">Stock</th>
+                        <th scope="col">nombre</th>
+                         <th scope="col">Categoria</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of prodList"> 
+                        <td>{{p.stock}}</td>
+                        <td>{{p.nombre}}</td>
+                        <td>{{p.categoria.nombreCategoria}}</td>
+                        <td>{{p.precioVenta}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+          </div>
         </div>
-    </div>
+      </div>
+      <a href='categorias'>Busqueda por categorias</a>
 
-</div>
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+
+   <!-- Bootstrap core JavaScript-->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\jquery\jquery.min.js"></script>
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\bootstrap\js\bootstrap.bundle.min.js"></script>
+
+ <!-- Core plugin JavaScript-->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\jquery-easing\jquery.easing.min.js"></script>
+
+ <!-- Custom scripts for all pages-->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\js\sb-admin-2.min.js"></script>
+
+ <!-- Page level plugins -->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\datatables\jquery.dataTables.min.js"></script>
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\vendor\datatables\dataTables.bootstrap4.min.js"></script>
+
+ <!-- Page level custom scripts -->
+ <script src="src\styles\startbootstrap-sb-admin-2-gh-pages\js\demo\datatables-demo.js"></script>

@@ -1,0 +1,25 @@
+<div>
+    <h1>Buscar por categorias</h1><br>
+    <input type="text" placeholder="Nombre categoria" [(ngModel)]="nombreCategoria"/>
+    <button (click)="buscarPorCategorias()">Buscar</button>
+
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <!--<th scope="col">Stock</th>-->
+                <th scope="col">nombre</th>
+                 <th scope="col">Categoria</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <!--<td>{{producto.stock}}</td>-->
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.codigoCategoria.nombreCategoria}}</td>
+                <td>{{producto.precioVenta}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
